@@ -1,0 +1,11 @@
+# 這是最頂層的設定，不要再往上找了
+root = true
+
+# 針對所有檔案的通用規範
+[*]
+charset = utf-8                # 使用最萬用的編碼
+indent_style = space           # 規定：全部用「空格」，不准用 Tab！
+indent_size = 2                # 規定：縮排就是「2 格」（Vue/TS 的標準美感）
+end_of_line = lf               # 規定：換行符號統一，跨平台不打架
+insert_final_newline = true    # 規定：檔案最後一定要留一行空白（專業禮貌）
+trim_trailing_whitespace = true # 規定：行末不准有沒意義的死空格
