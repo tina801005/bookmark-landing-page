@@ -1,0 +1,5 @@
+/* Component styles */
+@layer components {
+.menu{
+@apply flex items-center gap-6;}
+}
