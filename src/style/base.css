@@ -1,10 +1,19 @@
 /* Base styles 基礎樣式 */
-@layer base {
-  :root {
+@theme {
     --color-soft-blue: hsl(231, 69%, 60%);
     --color-soft-red: hsl(0, 94%, 66%);
     --color-gray: hsl(0, 0%, 97%);
     --color-very-dark-blue: hsl(229, 31%, 21%);
     --font-family-rubik: 'Rubik', sans-serif;
+}
+
+@layer base {
+  body{
+    @apply grid flex-col items-center justify-center min-h-screen ;
+    }
+
+  .main{
+      @apply container w-7xl flex flex-col items-center justify-center;
   }
+
 }

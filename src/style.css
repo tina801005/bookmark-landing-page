@@ -4,10 +4,3 @@
 @import "./style/components.css";
 @import "./style/utilities.css";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-body{
-@apply grid flex-col items-center justify-center min-h-screen ;
-}
-
-.main{
-    @apply container w-7xl flex flex-col items-center justify-center}

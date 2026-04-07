@@ -1,5 +1,23 @@
 /* Component styles */
 @layer components {
-    .menu{
-    @apply flex items-center gap-6;}
+    /* 輔助工具 */
+    .debug {
+        @apply outline outline-red-500 bg-blue-200;
+    }
+    .ui-debug {
+        @apply outline outline-green-500 bg-yellow-200;
+    }
+
+    /* 通用 */
+    .font-base{
+        @apply font-family-rubik;
+    }
+
+    /* .menu{
+        @apply flex items-center gap-6;}
+    } */
+     .button-style {
+        @apply cursor-pointer rounded-lg px-12 py-3;
+    }
+
 }
