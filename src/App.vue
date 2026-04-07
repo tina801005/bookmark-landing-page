@@ -9,12 +9,15 @@ import TheFooter from "./components/layout/TheFooter.vue";
 </script>
 
 <template>
-    <TheHeader />
-    <HeroSection />
-    <FeatureSection />
-    <DownloadSection />
-    <FAQSection />
-    <TheFooter />
+    <main class="main">
+        <TheHeader />
+        <HeroSection />
+        <FeatureSection />
+        <DownloadSection />
+        <FAQSection />
+        <TheFooter />
+    </main>
+
 </template>
 
 
