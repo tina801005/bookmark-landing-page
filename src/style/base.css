@@ -2,18 +2,18 @@
 @theme {
     --color-soft-blue: hsl(231, 69%, 60%);
     --color-soft-red: hsl(0, 94%, 66%);
-    --color-gray: hsl(0, 0%, 97%);
+    --color-white-gray: hsl(0, 0%, 97%);
     --color-very-dark-blue: hsl(229, 31%, 21%);
     --font-family-rubik: 'Rubik', sans-serif;
 }
 
 @layer base {
   body{
-    @apply grid flex-col items-center justify-center min-h-screen ;
+    @apply grid flex-col items-center justify-center min-h-screen;
     }
 
   .main{
-      @apply container w-7xl flex flex-col items-center justify-center;
+      @apply container w-lvw h-lvh flex flex-col mx-auto items-center justify-center;
   }
 
 }

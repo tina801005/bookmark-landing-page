@@ -1,4 +1,19 @@
 @import "tailwindcss";
 /* Utility styles  */
 @layer utilities {
+    .mobile-menu-item{
+        @apply  border-y border-white-gray/10 w-full py-6 cursor-pointer ;
+    }
+    .mobile-login-btn{
+        @apply py-4 px-30 my-6 border-transparent border-2 rounded-lg cursor-pointer;
+        @apply hover:border-white-gray transition delay-100;
+    }
+
+    .login-btn{
+        /* text */
+        @apply text-white-gray tracking-widest text-base font-normal bg-soft-red py-3.5 px-7.5 rounded-lg cursor-pointer ml-7.5 border border-transparent;
+        /* hover */
+        @apply hover:bg-white-gray hover:text-soft-red hover:border-soft-red hover:border hover:transition hover:delay-100 ;
+    }
+
 }

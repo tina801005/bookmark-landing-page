@@ -13,11 +13,25 @@
         @apply font-family-rubik;
     }
 
-    /* .menu{
-        @apply flex items-center gap-6;}
-    } */
+    .menu{
+        @apply flex items-center gap-3;
+    }
      .button-style {
-        @apply cursor-pointer rounded-lg px-12 py-3;
+        @apply cursor-pointer rounded-lg px-6 py-2.5;
+    }
+    .mobile-menu-text-style{
+        @apply text-white-gray text-lg tracking-widest text-center;
     }
 
+    .social-icon:hover{
+        filter: brightness(0) saturate(100%) invert(53%) sepia(31%) saturate(7466%) hue-rotate(330deg) brightness(106%) contrast(100%);
+        cursor: pointer;
+    }
+
+    .menu-item-font{
+        @apply text-very-dark-blue tracking-widest text-base font-normal;
+    }
+    .menu-list-item{
+        @apply hover:text-soft-red transition delay-100;
+    }
 }

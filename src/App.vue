@@ -9,7 +9,7 @@ import TheFooter from "./components/layout/TheFooter.vue";
 </script>
 
 <template>
-    <main class="main">
+    <main class="main font-base bg-red-50 p-7.5">
         <TheHeader />
         <HeroSection />
         <FeatureSection />
