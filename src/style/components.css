@@ -32,6 +32,7 @@
         @apply text-very-dark-blue tracking-widest text-base font-normal;
     }
     .menu-list-item{
+        @apply p-2 border-2 border-transparent cursor-pointer;
         @apply hover:text-soft-red transition delay-100;
     }
 }

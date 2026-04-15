@@ -1,6 +1,44 @@
 @import "tailwindcss";
 /* Utility styles  */
 @layer utilities {
+     /* 無障礙focus通用樣式 */
+  /* 文字用 */
+    .focus-link{
+        @apply
+        focus-visible:ring-2
+        focus-visible:ring-offset-2
+        focus-visible:rounded-md
+        focus-visible:p-1
+        focus-visible:outline-none
+        focus-visible:ring-soft-red
+        focus-visible:ring-offset-white-gray
+        focus-visible:text-soft-red
+        ;
+    }
+  /* 按鈕用 */
+  .focus-button{
+    @apply
+        focus-visible:bg-transparent
+        focus-visible:ring-2
+        focus-visible:ring-offset-2
+        focus-visible:outline-none
+        focus-visible:ring-soft-red
+        focus-visible:ring-offset-white-gray
+        focus-visible:text-soft-red;
+  }
+  /* icon和img用 */
+    .focus-others{
+        @apply
+        focus-visible:inline-block
+        focus-visible:ring-2
+        focus-visible:ring-offset-2
+        focus-visible:outline-none
+        focus-visible:rounded-lg
+        focus-visible:p-1
+        focus-visible:ring-soft-red
+        focus-visible:ring-offset-soft-red;
+    }
+
     .mobile-menu-item{
         @apply  border-y border-white-gray/10 w-full py-6 cursor-pointer ;
     }
@@ -8,6 +46,14 @@
         @apply py-4 px-30 my-6 border-transparent border-2 rounded-lg cursor-pointer;
         @apply hover:border-white-gray transition delay-100;
     }
+
+    .mobile-menu-background{
+        @apply fixed top-0 left-0 right-0 bottom-0 w-full bg-very-dark-blue/90  flex-col p-7;
+    }
+
+    .close-btn{
+        @apply p-2 border-2 border-transparent rounded-lg;
+        @apply hover:border-2 hover:border-white-gray hover:rounded-[50%];}
 
     .login-btn{
         /* text */
