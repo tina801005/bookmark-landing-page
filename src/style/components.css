@@ -13,6 +13,7 @@
         @apply font-family-rubik;
     }
 
+    /* TheHeader.vue */
     .menu{
         @apply flex items-center gap-3;
     }
@@ -35,4 +36,6 @@
         @apply p-2 border-2 border-transparent cursor-pointer;
         @apply hover:text-soft-red transition delay-100;
     }
+
+    /* HeroSection.vue */
 }

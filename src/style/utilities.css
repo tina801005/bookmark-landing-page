@@ -39,6 +39,7 @@
         focus-visible:ring-offset-soft-red;
     }
 
+    /* TheHeader.vue */
     .mobile-menu-item{
         @apply  border-y border-white-gray/10 w-full py-6 cursor-pointer ;
     }
@@ -62,4 +63,5 @@
         @apply hover:bg-white-gray hover:text-soft-red hover:border-soft-red hover:border hover:transition hover:delay-100 ;
     }
 
+     /* HeroSection.vue */
 }
