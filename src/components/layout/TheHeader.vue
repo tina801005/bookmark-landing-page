@@ -30,7 +30,7 @@ const toggleMobileMenu = () => {
 
 <template>
     <!-- 最外層 -->
-    <nav class="w-full flex justify-between items-center" aria-label="main navigation">
+    <nav class="sticky top-0 z-999 bg-white py-2 w-full flex justify-between items-center md:py-6" aria-label="main navigation">
         <!-- mobile和table都通用的外logo -->
         <div>
             <a href="/" aria-label="Bookmark Home" class="focus-others">
