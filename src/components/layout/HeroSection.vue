@@ -6,8 +6,7 @@ import BgBlueRect from "../ui/BgBlueRect.vue";
 
 <template>
     <section class="w-full relative">
-
-        <div class="my-10 flex flex-col items-center lg:flex-row-reverse lg:my-20 md:my-10">
+        <div class=" my-10 flex flex-col items-center lg:flex-row-reverse lg:my-20 md:my-10">
             <!-- 圖片 -->
             <div class="relative w-[90%] lg:mb-0 lg:w-1/2 flex justify-center">
                 <img src="/src/assets/images/illustration-hero.svg" alt="Hero image" class="w-full">

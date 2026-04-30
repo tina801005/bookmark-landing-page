@@ -30,8 +30,9 @@ const toggleMobileMenu = () => {
 
 <template>
     <!-- 最外層 -->
-    <nav class="sticky top-0 z-999 bg-white py-2 w-full flex justify-between items-center md:py-6" aria-label="main navigation">
-        <!-- mobile和table都通用的外logo -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white" aria-label="main navigation">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center md:py-6">
+            <!-- mobile和table都通用的外logo -->
         <div>
             <a href="/" aria-label="Bookmark Home" class="focus-others">
                 <img src="/src/assets/images/logo-bookmark.svg" alt="" aria-hidden="true">
@@ -98,6 +99,9 @@ const toggleMobileMenu = () => {
                 </a>
             </div>
         </div>
+
+        </div>
+
     </nav>
 </template>
 
