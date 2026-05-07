@@ -40,4 +40,9 @@
 
     /* HeroSection.vue */
 
+    /* 在多個component會重複用到的組件樣式 */
+    .btn-blue{
+        @apply p-3 rounded-lg bg-soft-blue text-white-gray cursor-pointer border-2 border-transparent font-medium shadow-lg ;
+        @apply hover:bg-white-gray hover:text-soft-blue hover:border-soft-blue;
+    }
 }
