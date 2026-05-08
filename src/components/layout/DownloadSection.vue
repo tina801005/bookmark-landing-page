@@ -9,7 +9,7 @@ import DownloadCards from "../ui/DownloadCards.vue";
         <div class="w-full flex flex-col justify-center items-center">
             <div class="flex flex-col justify-center items-center gap-6">
                 <h2>Download the extension</h2>
-                <p >We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favorite you’d like us to prioritize.</p>
+                <p class="max-w-md">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favorite you’d like us to prioritize.</p>
             </div>
             <DownloadCards />
         </div>

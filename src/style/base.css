@@ -23,6 +23,6 @@
 
   /* 內文樣式 */
   p{
-    @apply px-10 text-center text-very-dark-blue/50  max-w-md lg:px-0;
+    @apply px-10 text-center text-very-dark-blue/50   lg:px-0;
   }
 }

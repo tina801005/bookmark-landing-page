@@ -75,7 +75,7 @@ const activeFeature = computed(() => {
             lg:w-1/2 lg:text-left lg:items-start lg:pl-23"
             >
                 <h2>{{ activeFeature.title }}</h2>
-                <p class="lg:text-left ">{{ activeFeature.description }}</p>
+                <p class="max-w-md lg:text-left ">{{ activeFeature.description }}</p>
                 <button class="btn-blue hidden lg:block">More Info</button>
             </div>
         </div>
