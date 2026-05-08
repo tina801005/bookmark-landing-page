@@ -45,7 +45,7 @@ const activeFeature = computed(() => {
 </script>
 
 <template>
-    <div>
+    <div class="mt-15">
         <ul class="w-[75%] mx-auto flex flex-col justify-center items-center border-y border-very-dark-blue/20
         lg:flex-row lg:border-y-0 lg:border-b lg:w-[55%]">
             <li class="w-full grid place-items-center

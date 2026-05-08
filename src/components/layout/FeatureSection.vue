@@ -6,11 +6,11 @@ import FeatureTab from '../ui/FeatureTab.vue';
 </script>
 
 <template>
-   <section class="w-full">
+   <section class="w-full my-16  lg:my-32">
       <div class="w-full">
-         <div class=" flex flex-col items-center gap-6 text-center my-20 lg:my-32">
+         <div class="flex flex-col items-center gap-6 text-center ">
             <h2>Features</h2>
-            <p class="px-10 text-center text-very-dark-blue/50 font-medium max-w-md lg:px-0">Our aim is to make it quick and easy for you to access your favorite websites.
+            <p>Our aim is to make it quick and easy for you to access your favorite websites.
   Your bookmarks sync between your devices so you can access them on the go.</p>
         </div>
         <FeatureTab />
