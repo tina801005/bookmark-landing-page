@@ -8,7 +8,7 @@ import BgBlueRect from "../ui/BgBlueRect.vue";
     <section class="w-full relative">
 
         <div class="relative my-10 flex flex-col items-center lg:flex-row-reverse lg:my-20 md:my-10">
-            <BgBlueRect class="right-[-14%] rounded-l-full top-[10%] lg:top-[40%]"/>
+            <BgBlueRect class="w-[85vw] h-[clamp(200px,20vh,350px)] md:w-[45vw] lg:h-[clamp(280px,35vh,450px)] lg:w-[40vw] right-[-14%] rounded-l-full top-[10%] lg:top-[40%]"/>
 
             <!-- 圖片 -->
             <div class="relative w-[80%] flex justify-center lg:mb-0 lg:w-1/2">

@@ -51,7 +51,7 @@ const toggleItem = (targetItem: fqaItem) => {
 </script>
 
 <template>
-    <div class="w-full flex flex-col justify-center items-center lg:w-[36.5%]">
+    <div class="w-[85%] flex flex-col justify-center items-center lg:w-[36.5%]">
         <ul class="w-full lg:border-t lg:border-very-dark-blue/30">
             <li v-for="item in fqaItems" :key="item.id"
                 class="w-full flex flex-col border-b border-very-dark-blue/30 list-none">

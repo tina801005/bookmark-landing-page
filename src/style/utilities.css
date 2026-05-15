@@ -41,7 +41,7 @@
 
     /* TheHeader.vue */
     .mobile-menu-item{
-        @apply  border-y border-white-gray/10 w-full py-6 cursor-pointer ;
+        @apply  border-y border-white-gray/10 w-full py-6 cursor-pointer;
     }
     .mobile-login-btn{
         @apply py-4 px-30 my-6 border-transparent border-2 rounded-lg cursor-pointer;

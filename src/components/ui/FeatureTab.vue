@@ -47,7 +47,7 @@ const activeFeature = computed(() => {
 <template>
     <div class="mt-15">
         <ul class="w-[75%] mx-auto flex flex-col justify-center items-center border-y border-very-dark-blue/20
-        lg:flex-row lg:border-y-0 lg:border-b lg:w-[55%]">
+        lg:flex-row lg:border-y-0 lg:border-b lg:w-[55%]" role="tablist" aria-label="Feature tabs">
             <li class="w-full grid place-items-center
              lg:border-very-dark-blue/20 lg:w-1/3
              nth-2:border-y border-very-dark-blue/20
@@ -59,13 +59,14 @@ const activeFeature = computed(() => {
                  : 'text-very-dark-blue/60 after:h-0']"
 
                 class="hover:text-soft-red after:content-[''] after:w-[40%] after:bg-soft-red after:absolute after:bottom-0 after:left-[50%] after:transform after:translate-x-[-50%]
-                lg:after:w-full">{{ item.tabName }}</button>
+                lg:after:w-full" role="tab" :aria-selected="currentTab === item.id">{{ item.tabName }}</button>
             </li>
         </ul>
 
         <div v-if="activeFeature" class="relative my-10 flex flex-col justify-center items-center
         lg:flex-row lg:my-20 md:my-10">
-            <BgBlueRect class="left-[-15%] rounded-r-full top-[20%] translate-y-15 lg:translate-y-20 lg:top-[10%]"/>
+            <BgBlueRect class="w-100 h-90 left-[-15%] rounded-r-full top-[20%] translate-y-15
+            lg:translate-y-20 lg:top-[10%] lg:w-200"/>
             <div class="w-full flex justify-center
             lg:mb-0 lg:w-1/2">
                 <img :src="activeFeature.imgSrc" :alt="activeFeature.title"  class="z-10 w-full max-w-lg"/>

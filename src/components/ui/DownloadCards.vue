@@ -56,7 +56,7 @@ onMounted(() => {
                 :style="{ marginTop: index > 0 ? `${index * 40}px` : '0px',
                 transitionDelay: `${index * 150}ms` }">
                 <div class="flex flex-col justify-center items-center gap-4 pt-5">
-                    <img :src="item.imgSrc" :alt="item.name">
+                    <img :src="item.imgSrc" :alt="`${item.name} browser logo`">
                     <h3 class="text-very-dark-blue text-[clamp(1rem,1rem+1vw,1.5rem)] font-medium text-center">Add to {{item.name}}</h3>
                     <p>Minimum version {{item.minVersion}}</p>
                 </div>
