@@ -2,6 +2,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+import logoChromeUrl from "../../assets/images/logo-chrome.svg";
+import logoFirefoxUrl from "../../assets/images/logo-firefox.svg";
+import logoOperaUrl from "../../assets/images/logo-opera.svg";
+
 // 定義卡片資訊的類型，包含id、圖片來源、名稱和最低版本要求
 interface cardInfo {
     id: number;
@@ -14,19 +18,19 @@ interface cardInfo {
 const cards: cardInfo[] = [
     {
         id: 1,
-        imgSrc: "/src/assets/images/logo-chrome.svg",
+        imgSrc: "logoChromeUrl",
         name: "Chrome",
         minVersion: "62"
     },
     {
         id: 2,
-        imgSrc: "/src/assets/images/logo-firefox.svg",
+        imgSrc: "logoFirefoxUrl",
         name: "Firefox",
         minVersion: "55"
     },
     {
         id: 3,
-        imgSrc: "/src/assets/images/logo-opera.svg",
+        imgSrc: "logoOperaUrl",
         name: "Opera",
         minVersion: "46"
     }
