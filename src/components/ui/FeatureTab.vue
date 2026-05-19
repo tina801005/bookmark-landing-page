@@ -4,6 +4,11 @@
 import { ref, computed } from "vue";
 import BgBlueRect from "../ui/BgBlueRect.vue";
 
+// import導入圖片資源，這裡使用相對路徑來確保在構建過程中能正確解析
+import featuresTab1Url from "../../assets/images/illustration-features-tab-1.svg";
+import featuresTab2Url from "../../assets/images/illustration-features-tab-2.svg";
+import featuresTab3Url from "../../assets/images/illustration-features-tab-3.svg";
+
 // 定義每一項的資料類型
 interface Feature {
     id: number;
@@ -21,21 +26,21 @@ const features: Feature[] = [
         tabName: "Simple Bookmarking",
         title: "Bookmark in one click",
         description: "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.",
-        imgSrc: "./src/assets/images/illustration-features-tab-1.svg"
+        imgSrc: featuresTab1Url
     },
     {
         id:2,
         tabName: "Speedy Searching",
         title: "Intelligent search",
         description: "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
-        imgSrc: "/src/assets/images/illustration-features-tab-2.svg"
+        imgSrc: featuresTab2Url
     },
     {
         id:3,
         tabName: "Easy Sharing",
         title: "Share your bookmarks",
         description: "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
-        imgSrc: "/src/assets/images/illustration-features-tab-3.svg"
+        imgSrc: featuresTab3Url
     }
 ];
 
