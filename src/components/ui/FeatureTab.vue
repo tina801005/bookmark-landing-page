@@ -21,7 +21,7 @@ const features: Feature[] = [
         tabName: "Simple Bookmarking",
         title: "Bookmark in one click",
         description: "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.",
-        imgSrc: "/src/assets/images/illustration-features-tab-1.svg"
+        imgSrc: "./src/assets/images/illustration-features-tab-1.svg"
     },
     {
         id:2,
