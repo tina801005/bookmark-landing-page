@@ -1,8 +1,22 @@
-# Vue 3 + TypeScript + Vite
+# Bookmark 擴充功能一頁式產品官網
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<!-- 架構
+大標題
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+中英文切換標籤錨點
 
-# Bookmark Landing Page
+(以下中英文都一樣，先寫中文再寫英文)
+次標題
+    一句話簡述+作品連結
+簡介
+    專案架構
+    技術棧
+說明
+    主要功能
+    技術亮點
+    穩提挑戰與解決方案
+結語
 
+安裝流程
+
+回到最上面(標籤錨點)-->
