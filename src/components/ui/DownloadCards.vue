@@ -18,19 +18,19 @@ interface cardInfo {
 const cards: cardInfo[] = [
     {
         id: 1,
-        imgSrc: "logoChromeUrl",
+        imgSrc: logoChromeUrl,
         name: "Chrome",
         minVersion: "62"
     },
     {
         id: 2,
-        imgSrc: "logoFirefoxUrl",
+        imgSrc: logoFirefoxUrl,
         name: "Firefox",
         minVersion: "55"
     },
     {
         id: 3,
-        imgSrc: "logoOperaUrl",
+        imgSrc: logoOperaUrl,
         name: "Opera",
         minVersion: "46"
     }
