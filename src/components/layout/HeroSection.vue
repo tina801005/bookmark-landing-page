@@ -6,14 +6,18 @@ import BgBlueRect from "../ui/BgBlueRect.vue";
 
 <template>
     <section class="w-full relative">
+        <BgBlueRect class="h-55 w-90  rounded-l-full top-10 -right-10
+            md:w-130 md:h-70 md:top-25 md:right-[-20%]
+            lg:w-160 lg:h-85 lg:top-30 lg:right-[-20%]
+            xl:h-85 xl:w-180 xl:top-[35%] xl:right-[-20%]
+            "/>
 
         <div class="relative my-10 flex flex-col items-center lg:flex-row-reverse lg:my-20 md:my-10">
-            <BgBlueRect class="w-[85vw] h-[clamp(200px,20vh,350px)] md:w-[45vw] lg:h-[clamp(280px,35vh,450px)] lg:w-[40vw] right-[-14%] rounded-l-full top-[10%] lg:top-[40%]"/>
-
             <!-- 圖片 -->
-            <div class="relative w-[80%] flex justify-center lg:mb-0 lg:w-1/2">
+            <div class="relative w-[80%] flex justify-center
+            lg:mb-0 lg:w-auto">
                 <img src="/src/assets/images/illustration-hero.svg" alt="Hero image" class="w-full">
-                </div>
+            </div>
             <!-- 文字 -->
             <div class="flex flex-col gap-6 p-6 items-center text-center lg:w-1/2 lg:items-start lg:text-left">
                 <h1 class="text-[clamp(2rem,1rem+3vw,3.5rem)] font-medium text-center lg:text-left max-w-[20ch] leading-tight">A Simple Bookmark Manager</h1>

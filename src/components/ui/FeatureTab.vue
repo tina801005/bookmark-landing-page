@@ -65,10 +65,15 @@ const activeFeature = computed(() => {
 
         <div v-if="activeFeature" class="relative my-10 flex flex-col justify-center items-center
         lg:flex-row lg:my-20 md:my-10">
-            <BgBlueRect class="w-100 h-90 left-[-15%] rounded-r-full top-[20%] translate-y-15
-            lg:translate-y-20 lg:top-[10%] lg:w-200"/>
-            <div class="w-full flex justify-center
-            lg:mb-0 lg:w-1/2">
+            <!-- <BgBlueRect class="w-100 h-90 left-[-15%] rounded-r-full top-[20%] translate-y-15
+            lg:translate-y-20 lg:top-[10%] lg:w-200"/> -->
+            <BgBlueRect class="h-55 w-90  rounded-r-full bottom-45 -left-10
+            md:w-130 md:h-70 md:left-[-20%]
+            lg:w-160 lg:h-85 lg:-bottom-10 lg:left-[-20%]
+            xl:h-85 xl:w-180 xl:left-[-20%]
+            "/>
+            <div class="w-[80%] flex justify-center
+            lg:mb-0 lg:w-auto">
                 <img :src="activeFeature.imgSrc" :alt="activeFeature.title"  class="z-10 w-full max-w-lg"/>
             </div>
             <div class="flex flex-col justify-center items-center text-center gap-6

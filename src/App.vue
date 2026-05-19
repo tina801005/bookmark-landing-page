@@ -9,7 +9,7 @@ import TheFooter from "./components/layout/TheFooter.vue";
 </script>
 
 <template>
-    <main class="main font-base overflow-hidden">
+    <main class="main font-base">
         <div class="p-10 lg:p-20">
            <TheHeader />
             <HeroSection />

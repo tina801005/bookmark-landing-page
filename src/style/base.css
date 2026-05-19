@@ -9,7 +9,7 @@
 
 @layer base {
   body{
-    @apply grid flex-col items-center justify-center;
+    @apply grid flex-col items-center justify-center overflow-x-hidden;
     }
 
   .main{
