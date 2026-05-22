@@ -10,8 +10,8 @@ import TheFooter from "./components/layout/TheFooter.vue";
 
 <template>
     <main class="main font-base">
+        <TheHeader />
         <div class="p-10 lg:p-20">
-           <TheHeader />
             <HeroSection />
             <FeatureSection />
             <DownloadSection />
