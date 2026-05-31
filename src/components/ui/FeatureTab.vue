@@ -63,8 +63,9 @@ const handleTabKeydown = (event: KeyboardEvent, itemId: number) => {
 
   currentTab.value = features[nextIndex].id;
   const tabs = (event.currentTarget as HTMLElement).closest('ul')?.querySelectorAll('[role="tab"]');
+  const buttonRef = ref<HTMLButtonElement | null>(null);
   if (tabs && tabs[nextIndex] instanceof HTMLElement) {
-    tabs[nextIndex].focus();
+    buttonRef.value?.focus();
   }
   event.preventDefault();
 };
