@@ -12,7 +12,7 @@ import FAQToggle from "../ui/FAQToggle.vue";
                 <p class="max-w-md">Here are some of our FAQs. If you have any other questions you’d like
   answered please feel free to email us.</p>
             </div>
-            <FQAToggle class="my-6"/>
+            <FAQToggle class="my-6"/>
         </div>
     </section>
 </template>
