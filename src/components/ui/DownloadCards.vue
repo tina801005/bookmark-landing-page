@@ -65,7 +65,7 @@ onMounted(() => {
                     <p>Minimum version {{item.minVersion}}</p>
                 </div>
                 <div class="w-[calc(100%+5rem)] my-5 p-1 h-1 bg-[url('/src/assets/images/bg-dots.svg')] bg-repeat-x bg-center"></div>
-                <button class="w-full btn-blue">Add & Install Extension</button>
+                <button class="w-full btn-blue focus-button" :aria-label="`Add & Install Extension for ${item.name}`">Add & Install Extension</button>
             </div>
         </TransitionGroup>
     </div>

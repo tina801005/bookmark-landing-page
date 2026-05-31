@@ -49,8 +49,13 @@ const handleSubmit = () => {
                     class="w-full bg-white-gray p-4 rounded-lg"
                     v-model="email"
                     :class="showError ? 'border border-soft-red' : ''"
-                    aria-label="Email address"/>
+                    aria-label="Email address"
+                    :aria-describedby="showError ? 'email-error' : undefined"
+                    :aria-invalid="showError" />
                         <span v-show="showError"
+                        id="email-error"
+                        role="alert"
+                        aria-live="assertive"
                         class="w-full block p-3 bg-soft-red rounded-lg text-left text-white-gray text-sm overflow-hidden transition-all duration-300"
                         :style="{ maxHeight: showError ? '100px' : '0px' }"><i>Whoops, make sure it's a email</i></span>
 
@@ -60,10 +65,10 @@ const handleSubmit = () => {
                             <img src="/src/assets/images/icon-error.svg" alt="Error icon" />
                         </div>
                     </div>
-                    <button class="w-full text-center bg-soft-red text-white-gray p-4 rounded-lg cursor-pointer border border-transparent
+                    <button class="w-full text-center bg-soft-red text-white-gray p-4 rounded-lg cursor-pointer border border-transparent focus-button
                      lg:w-1/3
                      hover:bg-white-gray hover:border-2 hover:border-soft-red hover:text-soft-red"
-                     @click="handleSubmit">Contact Us</button>
+                     @click="handleSubmit" aria-label="Contact Us">Contact Us</button>
                 </div>
             </div>
         </section>
@@ -86,10 +91,14 @@ const handleSubmit = () => {
                     </ul>
                     <ul class="flex justify-center items-center gap-10 mt-5 lg:mt-0 ">
                         <li class="social-icon">
-                            <img src="/src/assets/images/icon-facebook.svg" alt="Facebook">
+                            <a href="#" aria-label="Facebook" class="focus-others">
+                                <img src="/src/assets/images/icon-facebook.svg" alt="Facebook">
+                            </a>
                         </li>
                         <li class="social-icon">
-                            <img src="/src/assets/images/icon-twitter.svg" alt="Twitter">
+                            <a href="#" aria-label="Twitter" class="focus-others">
+                                <img src="/src/assets/images/icon-twitter.svg" alt="Twitter">
+                            </a>
                         </li>
                     </ul>
             </div>

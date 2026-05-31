@@ -44,5 +44,7 @@
     .btn-blue{
         @apply p-3 rounded-lg bg-soft-blue text-white-gray cursor-pointer border-2 border-transparent font-medium text-sm shadow-lg ;
         @apply hover:bg-white-gray hover:text-soft-blue hover:border-soft-blue;
+        /* 無障礙 focus 樣式 - 與 utilities.css .focus-button 保持一致 */
+        @apply focus-visible:bg-transparent focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none focus-visible:ring-soft-red focus-visible:ring-offset-white-gray focus-visible:text-soft-red;
     }
 }

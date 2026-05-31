@@ -1,7 +1,7 @@
 <!-- FAQSection component只放常見問題內容，包含 次標題h2、內文p、FAQ toggle -->
 
 <script setup>
-import FQAToggle from "../ui/FQAToggle.vue";
+import FAQToggle from "../ui/FAQToggle.vue";
 </script>
 
 <template>

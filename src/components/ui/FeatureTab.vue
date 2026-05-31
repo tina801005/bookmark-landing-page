@@ -47,35 +47,56 @@ const features: Feature[] = [
 const activeFeature = computed(() => {
   return features.find(f => f.id === currentTab.value);
 });
+
+const handleTabKeydown = (event: KeyboardEvent, itemId: number) => {
+  const currentIndex = features.findIndex((feature) => feature.id === itemId);
+  if (currentIndex === -1) return;
+
+  let nextIndex = currentIndex;
+  if (event.key === 'ArrowRight') {
+    nextIndex = (currentIndex + 1) % features.length;
+  } else if (event.key === 'ArrowLeft') {
+    nextIndex = (currentIndex - 1 + features.length) % features.length;
+  } else {
+    return;
+  }
+
+  currentTab.value = features[nextIndex].id;
+  const tabs = (event.currentTarget as HTMLElement).closest('ul')?.querySelectorAll('[role="tab"]');
+  if (tabs && tabs[nextIndex] instanceof HTMLElement) {
+    tabs[nextIndex].focus();
+  }
+  event.preventDefault();
+};
 </script>
 
 <template>
     <div class="mt-15">
         <ul class="w-[75%] mx-auto flex flex-col justify-center items-center border-y border-very-dark-blue/20
         lg:flex-row lg:border-y-0 lg:border-b lg:w-[55%]" role="tablist" aria-label="Feature tabs">
-            <li class="w-full grid place-items-center
+                     <li class="w-full grid place-items-center
              lg:border-very-dark-blue/20 lg:w-1/3
              nth-2:border-y border-very-dark-blue/20
              lg:nth-2:border-y-0"
              v-for="item in features" :key="item.id">
-                <button @click="currentTab = item.id"
-                :class="['w-full py-4 cursor-pointer relative ',
-                 currentTab === item.id ? 'text-very-dark-blue after:h-1'
-                 : 'text-very-dark-blue/60 after:h-0']"
-
-                class="hover:text-soft-red after:content-[''] after:w-[40%] after:bg-soft-red after:absolute after:bottom-0 after:left-[50%] after:transform after:translate-x-[-50%]
-                lg:after:w-full" role="tab" :aria-selected="currentTab === item.id">{{ item.tabName }}</button>
+                     <button @click="currentTab = item.id"
+                     @keydown="handleTabKeydown($event, item.id)"
+                     :id="`tab-${item.id}`"
+                     :aria-controls="`feature-panel-${item.id}`"
+                     :aria-selected="currentTab === item.id"
+                     role="tab"
+                     class="w-full py-4 cursor-pointer relative hover:text-soft-red after:content-[''] after:w-[40%] after:bg-soft-red after:absolute after:bottom-0 after:left-[50%] after:transform after:translate-x-[-50%] lg:after:w-full focus-button"
+                     :class="currentTab === item.id ? 'text-very-dark-blue after:h-1' : 'text-very-dark-blue/60 after:h-0'">
+                     {{ item.tabName }}</button>
             </li>
         </ul>
 
-        <div v-if="activeFeature" class="relative my-10 flex flex-col justify-center items-center
+        <div v-if="activeFeature" :id="`feature-panel-${currentTab}`" class="relative my-10 flex flex-col justify-center items-center
         lg:flex-row lg:my-20 md:my-10">
-            <!-- <BgBlueRect class="w-100 h-90 left-[-15%] rounded-r-full top-[20%] translate-y-15
-            lg:translate-y-20 lg:top-[10%] lg:w-200"/> -->
-            <BgBlueRect class="h-55 w-90  rounded-r-full bottom-45 -left-10
-            md:w-130 md:h-70 md:left-[-20%]
-            lg:w-160 lg:h-85 lg:-bottom-10 lg:left-[-20%]
-            xl:h-85 xl:w-180 xl:left-[-20%]
+            <BgBlueRect class="rounded-r-full bottom-45 -left-10
+            md:left-[-20%]
+            lg:-bottom-10 lg:left-[-20%]
+            xl:left-[-20%]
             "/>
             <div class="w-[80%] flex justify-center
             lg:mb-0 lg:w-auto">
@@ -84,10 +105,11 @@ const activeFeature = computed(() => {
             <div class="flex flex-col justify-center items-center text-center gap-6
             sm: mt-18 md:mt-24
             lg:w-1/2 lg:text-left lg:items-start lg:pl-23"
+            role="tabpanel" :aria-labelledby="`tab-${currentTab}`" tabindex="0"
             >
                 <h2>{{ activeFeature.title }}</h2>
                 <p class="max-w-md lg:text-left ">{{ activeFeature.description }}</p>
-                <button class="btn-blue hidden lg:block">More Info</button>
+                <button class="btn-blue hidden lg:block focus-button">More Info</button>
             </div>
         </div>
     </div>

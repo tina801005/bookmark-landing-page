@@ -6,10 +6,10 @@ import BgBlueRect from "../ui/BgBlueRect.vue";
 
 <template>
     <section class="w-full relative">
-        <BgBlueRect class="h-55 w-90  rounded-l-full top-10 -right-10
-            md:w-130 md:h-70 md:top-25 md:right-[-20%]
-            lg:w-160 lg:h-85 lg:top-30 lg:right-[-20%]
-            xl:h-85 xl:w-180 xl:top-[35%] xl:right-[-20%]
+        <BgBlueRect class="rounded-l-full top-10 -right-10
+            md:top-25 md:right-[-20%]
+            lg:top-30 lg:right-[-20%]
+            xl:top-[35%] xl:right-[-20%]
             "/>
 
         <div class="relative my-10 flex flex-col items-center lg:flex-row-reverse lg:my-20 md:my-10">
@@ -23,8 +23,8 @@ import BgBlueRect from "../ui/BgBlueRect.vue";
                 <h1 class="text-[clamp(2rem,1rem+3vw,3.5rem)] font-medium text-center lg:text-left max-w-[20ch] leading-tight">A Simple Bookmark Manager</h1>
                 <p class="lg:text-left lg:px-0 max-w-md">A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
                 <div class="flex gap-3 ">
-                    <button class="btn-blue">Get it on Chrome</button>
-                    <button class="p-3 rounded-lg bg-white-gray text-very-dark-blue cursor-pointer border-2 border-transparent font-medium shadow-lg hover:bg-white-gray hover:text-very-dark-blue hover:border-very-dark-blue">Get it on Firefox</button>
+                    <button class="btn-blue focus-button">Get it on Chrome</button>
+                    <button class="p-3 rounded-lg bg-white-gray text-very-dark-blue cursor-pointer border-2 border-transparent font-medium shadow-lg hover:bg-white-gray hover:text-very-dark-blue hover:border-very-dark-blue focus-button">Get it on Firefox</button>
                 </div>
             </div>
         </div>

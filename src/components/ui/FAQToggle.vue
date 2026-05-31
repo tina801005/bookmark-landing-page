@@ -57,17 +57,20 @@ const toggleItem = (targetItem: fqaItem) => {
                 class="w-full flex flex-col border-b border-very-dark-blue/30 list-none">
 
                 <button @click="toggleItem(item)"
-                        class="group w-full flex justify-between items-center cursor-pointer py-6 text-very-dark-blue hover:text-soft-red transition-colors">
+                        :id="`faq-btn-${item.id}`"
+                        :aria-expanded="item.isOpen"
+                        :aria-controls="`faq-panel-${item.id}`"
+                        class="group w-full flex justify-between items-center cursor-pointer py-6 text-very-dark-blue hover:text-soft-red transition-colors focus-button">
                     <span class="text-start">{{ item.question }}</span>
                     <span>
-                        <img src="/src/assets/images/icon-arrow.svg" alt="Arrow"
+                        <img src="/src/assets/images/icon-arrow.svg" alt="" aria-hidden="true"
                              class="transition-all duration-300"
                              :class="item.isOpen ? 'rotate-180 arrow-red' : 'rotate-0'">
                     </span>
                 </button>
 
-                <div class="overflow-hidden transition-all duration-300"
-                     :class="item.isOpen ? 'max-h-96 pb-6' : 'max-h-0'">
+                <div :id="`faq-panel-${item.id}`" class="overflow-hidden transition-all duration-300"
+                     :class="item.isOpen ? 'max-h-96 pb-6' : 'max-h-0'" role="region" :aria-labelledby="`faq-btn-${item.id}`">
                     <p class="text-start text-very-dark-blue/70 px-0 lg:text-base/8">
                         {{ item.answer }}
                     </p>
@@ -75,7 +78,7 @@ const toggleItem = (targetItem: fqaItem) => {
             </li>
         </ul>
         <div class="w-full grid place-items-center lg:w-[28%] mt-10">
-            <button class="btn-blue">More Info</button>
+            <button class="btn-blue focus-button">More Info</button>
         </div>
     </div>
 </template>
